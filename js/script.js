@@ -23,3 +23,18 @@ for (let i = 0; i < 2; i++) {
 }
 
 console.log(personalMovieDB);
+
+
+const hamburger = 2;
+const fries = 1;
+
+if (hamburger === 3 && fries) {
+    console.log('NICE');
+}
+
+let a, b, c, d, e = 'lox';
+
+console.log(a || b || c || d || e);
+
+
+
