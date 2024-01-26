@@ -1,18 +1,25 @@
 'use strict';
 
-console.log(-4/0);
-console.log('string' * 9);
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');;
 
-const persone = `5`;
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {
 
-const obj = {
-    name: "John",
-    age: 25,
-    isMarried: false
+    },
+    actors: {
+
+    },
+    genres: [
+
+    ],
+    privat: false
 };
 
-console.log(obj.age);
+for (let i = 0; i < 2; i++) {
+    let lastWatchedFilm = prompt('Один из последних просмотренных фильмов?', '');
+    let filmScore = +prompt('На сколько оцените его?', '');
+    personalMovieDB.movies[lastWatchedFilm] = filmScore;
+}
 
-let arr = ['plum.png', 'orange.jpg', 6, 'apple.bmp', {}, []];
-
-console.log(arr[0]);
+console.log(personalMovieDB);
