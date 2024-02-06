@@ -127,6 +127,27 @@
 
 // }
 
-function showFirstMessage() {
-    
+'use strict';
+
+let num = 20;
+
+function showFirstMessage(text) {
+    console.log(text);
+    console.log(num);
 }
+
+showFirstMessage("Hello");
+console.log(num);
+
+//Function Declaration
+function calc(a, b) {
+    return a + b;
+}
+
+//Function Expression
+const res = function () {
+    ///
+}
+
+//Arrow Function
+const res2 = (a, b) => console.log(a + b);
