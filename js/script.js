@@ -1,40 +1,40 @@
 'use strict';
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');;
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');;
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {
 
-    },
-    actors: {
+//     },
+//     actors: {
 
-    },
-    genres: [
+//     },
+//     genres: [
 
-    ],
-    privat: false
-};
+//     ],
+//     privat: false
+// };
 
-for (let i = 0; i < 2; i++) {
-    let lastWatchedFilm = prompt('Один из последних просмотренных фильмов?', '');
-    let filmScore = +prompt('На сколько оцените его?', '');
-    personalMovieDB.movies[lastWatchedFilm] = filmScore;
-}
+// for (let i = 0; i < 2; i++) {
+//     let lastWatchedFilm = prompt('Один из последних просмотренных фильмов?', '');
+//     let filmScore = +prompt('На сколько оцените его?', '');
+//     personalMovieDB.movies[lastWatchedFilm] = filmScore;
+// }
 
-console.log(personalMovieDB);
+// console.log(personalMovieDB);
 
 
-const hamburger = 2;
-const fries = 1;
+// const hamburger = 2;
+// const fries = 1;
 
-if (hamburger === 3 && fries) {
-    console.log('NICE');
-}
+// if (hamburger === 3 && fries) {
+//     console.log('NICE');
+// }
 
-let a, b, c, d, e = 'lox';
+// let a, b, c, d, e = 'lox';
 
-console.log(a || b || c || d || e);
+// console.log(a || b || c || d || e);
 
 // *
 // **
@@ -61,19 +61,72 @@ console.log(a || b || c || d || e);
 // }
 
 
-let result = '';
+// let result = '';
 
-const length = 7;
+// const length = 7;
 
-for (let i = 0; i < length; i++) {
+// for (let i = 0; i < length; i++) {
     
-    for (let j = 0; j < i; j ++) {
+//     for (let j = 0; j < i; j ++) {
 
-        result += '*';
+//         result += '*';
 
-    }
+//     }
 
-    result += "\n";
+//     result += "\n";
+// }
+
+// console.log(result);
+
+
+
+// start: while (true) {
+
+//     let numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
+
+//     if (numberOfFilms === '' || numberOfFilms === null || numberOfFilms.length > 50) {
+//         continue start;ё
+//     }
+
+//     numberOfFilms = +numberOfFilms;
+
+//     const personalMovieDB = {
+//         count: numberOfFilms,
+//         movies: {
+    
+//         },
+//         actors: {
+    
+//         },
+//         genres: [
+    
+//         ],
+//         privat: false
+//     };
+    
+//     for (let i = 0; i < 2; i++) {
+//         let lastWatchedFilm = prompt('Один из последних просмотренных фильмов?', '');
+//         let filmScore = +prompt('На сколько оцените его?', '');
+//         personalMovieDB.movies[lastWatchedFilm] = filmScore;
+//     }
+    
+//     if (personalMovieDB.count < 10) {
+//         alert(`Просмотрено довольно мало фильмов`);
+//     }
+//     else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 30) {
+//         alert(`Вы классический зритель`);
+//     }
+//     else if (personalMovieDB.count > 30) {
+//         alert(`Вы киноман`);
+//     }
+//     else {
+//         alert("Произошла ошибка");
+//     }
+
+//     console.log(personalMovieDB);
+
+// }
+
+function showFirstMessage() {
+    
 }
-
-console.log(result);
