@@ -183,8 +183,8 @@ const personalMovieDB = {
 function rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
 
-        const lastWatchedFilm = prompt('Один из последних просмотренных фильмов?', ''),
-            filmScore = prompt('На сколько оцените его?', '');
+        const lastWatchedFilm = prompt('Один из последних просмотренных фильмов?', '').trim(),
+              filmScore = prompt('На сколько оцените его?', '');
 
         if (numberOfFilms === '' || numberOfFilms === null || numberOfFilms.length > 50) {
             console.log('error');
