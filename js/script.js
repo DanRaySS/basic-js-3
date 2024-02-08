@@ -261,25 +261,25 @@
 
 // learnJS('JavaScript', done);
 
-'use strict';
+// 'use strict';
 
-const options = {
-    name: 'test',
-    width: 1024,
-    height: 1024,
-    colors: {
-        border: 'black',
-        bg: 'red',
-    },
-    makeTest: function () {
-        console.log('Test');
-    }
-};
+// const options = {
+//     name: 'test',
+//     width: 1024,
+//     height: 1024,
+//     colors: {
+//         border: 'black',
+//         bg: 'red',
+//     },
+//     makeTest: function () {
+//         console.log('Test');
+//     }
+// };
 
-options.makeTest();
+// options.makeTest();
 
-const {border, bg} = options.colors;
-console.log(border);
+// const {border, bg} = options.colors;
+// console.log(border);
 
 // console.log(Object.keys(options).length);
 
@@ -302,3 +302,45 @@ console.log(border);
 //     }
 // }
 // console.log(counter);
+
+"use strict";
+
+const arr = [1, 20, 3, 40, 5];
+arr.sort(compareNum);
+console.log(arr);
+
+function compareNum(a, b) {
+    return a - b;
+}
+
+// arr[10] = 0;
+
+// console.log(arr.length);
+// console.log(arr);
+
+// arr.forEach(function(item, i, arr) {
+//     console.log(`${i}: ${item} внутри массива ${arr}`);
+// })
+
+// arr.pop();
+// arr.push(10);
+
+// arr.shift();
+// arr.unshift(2);
+
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// for (let value of arr) {
+//     console.log(value);
+// }
+
+// const str = prompt("", "");
+// const products = str.split(", ");
+// products.sort();
+
+// console.log(products.join('; '));
+// console.log(products);
