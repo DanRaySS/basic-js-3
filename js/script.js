@@ -346,8 +346,39 @@ function compareNum(a, b) {
 // console.log(products);
 
 
-const video = ['youtube', 'vimeo', 'rutube'],
-      blogs = ['wordpress', 'livejournal', 'blogger'],
-      internet = [...video, ...blogs, 'vk', 'facebook'];
+// const video = ['youtube', 'vimeo', 'rutube'],
+//       blogs = ['wordpress', 'livejournal', 'blogger'],
+//       internet = [...video, ...blogs, 'vk', 'facebook'];
 
-console.log(internet);
+// console.log(internet);
+
+// let str = 'some';
+// let strObj = new String(str);
+
+// // console.log(typeof(str));
+// // console.log(typeof(strObj));
+// // console.log(strObj);
+
+// console.dir([1, 2, 3]);
+
+// const soldier = {
+//     health: 400,
+//     armor: 100,
+//     sayHello: function () {
+//         console.log('Say Hello');
+//     }
+// };
+
+// const john = Object.create(soldier);
+
+// // const john = {
+// //     health: 100
+// // };
+
+// // john.__proto__ = soldier;
+
+// // Object.setPrototypeOf(john, soldier);
+
+// john.sayHello();
+
+// console.log(john);
