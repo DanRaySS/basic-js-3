@@ -154,6 +154,156 @@
 
 // "use strict";
 
+// function first() {
+//     //Do smth
+
+//     setTimeout(function() {
+//         console.log(1);
+//     }, 500);
+// }
+
+// function second() {
+//     console.log(2);
+// }
+
+// first();
+// second();
+
+// function learnJS(lang, callback) {
+//     console.log(`Я учу: ${lang}`);
+//     callback();
+// }
+
+// function done() {
+//     console.log('Я прошёл этот урок!');
+// }
+
+// learnJS('JavaScript', done);
+
+// 'use strict';
+
+// const options = {
+//     name: 'test',
+//     width: 1024,
+//     height: 1024,
+//     colors: {
+//         border: 'black',
+//         bg: 'red',
+//     },
+//     makeTest: function () {
+//         console.log('Test');
+//     }
+// };
+
+// options.makeTest();
+
+// const {border, bg} = options.colors;
+// console.log(border);
+
+// console.log(Object.keys(options).length);
+
+// console.log(options.name);
+
+// delete options.name;
+
+// console.log(options);
+
+// let counter = 0;
+// for (let key in options) {
+//     if (typeof (options[key]) === 'object') {
+//         for (let i in options[key]) {
+//             console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+//             counter++;
+//         }
+//     } else {
+//         console.log(`Свойство ${key} имеет значение ${options[key]}`);
+//         counter++;
+//     }
+// }
+// console.log(counter);
+
+// "use strict";
+
+// const arr = [1, 20, 3, 40, 5];
+// arr.sort(compareNum);
+// console.log(arr);
+
+// function compareNum(a, b) {
+//     return a - b;
+// }
+
+// arr[10] = 0;
+
+// console.log(arr.length);
+// console.log(arr);
+
+// arr.forEach(function(item, i, arr) {
+//     console.log(`${i}: ${item} внутри массива ${arr}`);
+// })
+
+// arr.pop();
+// arr.push(10);
+
+// arr.shift();
+// arr.unshift(2);
+
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// for (let value of arr) {
+//     console.log(value);
+// }
+
+// const str = prompt("", "");
+// const products = str.split(", ");
+// products.sort();
+
+// console.log(products.join('; '));
+// console.log(products);
+
+
+// const video = ['youtube', 'vimeo', 'rutube'],
+//       blogs = ['wordpress', 'livejournal', 'blogger'],
+//       internet = [...video, ...blogs, 'vk', 'facebook'];
+
+// console.log(internet);
+
+// let str = 'some';
+// let strObj = new String(str);
+
+// // console.log(typeof(str));
+// // console.log(typeof(strObj));
+// // console.log(strObj);
+
+// console.dir([1, 2, 3]);
+
+// const soldier = {
+//     health: 400,
+//     armor: 100,
+//     sayHello: function () {
+//         console.log('Say Hello');
+//     }
+// };
+
+// const john = Object.create(soldier);
+
+// // const john = {
+// //     health: 100
+// // };
+
+// // john.__proto__ = soldier;
+
+// // Object.setPrototypeOf(john, soldier);
+
+// john.sayHello();
+
+// console.log(john);
+
+// "use strict";
+
 // let numberOfFilms;
 
 // function start() {
@@ -233,152 +383,102 @@
 
 // showMyDB(personalMovieDB.privat);
 
-// "use strict";
-
-// function first() {
-//     //Do smth
-
-//     setTimeout(function() {
-//         console.log(1);
-//     }, 500);
-// }
-
-// function second() {
-//     console.log(2);
-// }
-
-// first();
-// second();
-
-// function learnJS(lang, callback) {
-//     console.log(`Я учу: ${lang}`);
-//     callback();
-// }
-
-// function done() {
-//     console.log('Я прошёл этот урок!');
-// }
-
-// learnJS('JavaScript', done);
-
-// 'use strict';
-
-// const options = {
-//     name: 'test',
-//     width: 1024,
-//     height: 1024,
-//     colors: {
-//         border: 'black',
-//         bg: 'red',
-//     },
-//     makeTest: function () {
-//         console.log('Test');
-//     }
-// };
-
-// options.makeTest();
-
-// const {border, bg} = options.colors;
-// console.log(border);
-
-// console.log(Object.keys(options).length);
-
-// console.log(options.name);
-
-// delete options.name;
-
-// console.log(options);
-
-// let counter = 0;
-// for (let key in options) {
-//     if (typeof (options[key]) === 'object') {
-//         for (let i in options[key]) {
-//             console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
-//             counter++;
-//         }
-//     } else {
-//         console.log(`Свойство ${key} имеет значение ${options[key]}`);
-//         counter++;
-//     }
-// }
-// console.log(counter);
-
 "use strict";
 
-const arr = [1, 20, 3, 40, 5];
-arr.sort(compareNum);
-console.log(arr);
+const personalMovieDB = {
+    count: 0,
+    movies: {
 
-function compareNum(a, b) {
-    return a - b;
-}
+    },
+    actors: {
 
-// arr[10] = 0;
+    },
+    genres: [
 
-// console.log(arr.length);
-// console.log(arr);
+    ],
+    privat: false,
 
-// arr.forEach(function(item, i, arr) {
-//     console.log(`${i}: ${item} внутри массива ${arr}`);
-// })
+    start: function () {
+        personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-// arr.pop();
-// arr.push(10);
+        while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
+            personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');
+        }
+    },
 
-// arr.shift();
-// arr.unshift(2);
+    rememberMyFilms: function () {
+        for (let i = 0; i < 2; i++) {
 
-// console.log(arr);
+            const lastWatchedFilm = prompt('Один из последних просмотренных фильмов?', '').trim(),
+                filmScore = prompt('На сколько оцените его?', '');
 
-// for (let i = 0; i < arr.length; i++) {
-//     console.log(arr[i]);
-// }
+            if (personalMovieDB.count === '' || personalMovieDB.count === null || personalMovieDB.count.length > 50) {
+                console.log('error');
+                i--;
+                continue;
+            }
+            personalMovieDB.movies[lastWatchedFilm] = filmScore;
+            console.log('done');
+        }
+    },
 
-// for (let value of arr) {
-//     console.log(value);
-// }
+    detectPersonalLevel: function () {
+        if (personalMovieDB.count < 10) {
+            alert(`Просмотрено довольно мало фильмов`);
+        }
+        else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 30) {
+            alert(`Вы классический зритель`);
+        }
+        else if (personalMovieDB.count > 30) {
+            alert(`Вы киноман`);
+        }
+        else {
+            alert("Произошла ошибка");
+        }
+    },
 
-// const str = prompt("", "");
-// const products = str.split(", ");
-// products.sort();
+    showMyDB: function (hidden) {
+        if (hidden) {
+            return;
+        }
+        console.log(personalMovieDB);
+    },
 
-// console.log(products.join('; '));
-// console.log(products);
+    writeYourGenres: function () {
+        start: for (let i = 1; i <= 3; i++) {
+            let favouriteGenre = prompt(`Ваш любимый жанр под номером ${i}: `, '');
+            if (favouriteGenre === '' || favouriteGenre === null) {
+                i--;
+                continue start;
+            }
+            personalMovieDB.genres[i - 1] = favouriteGenre;
+        }
+        personalMovieDB.genres.forEach((genre, index) => {
+            console.log(`Любимый жанр #${index + 1} - это ${genre}`);
+        });
+    },
 
+    toggleVisibleMyDB: function () {
+        if (personalMovieDB.privat) {
+            personalMovieDB.privat = false;
+            return;
+        }
+        personalMovieDB.privat = true;
+    }
+};
 
-// const video = ['youtube', 'vimeo', 'rutube'],
-//       blogs = ['wordpress', 'livejournal', 'blogger'],
-//       internet = [...video, ...blogs, 'vk', 'facebook'];
+personalMovieDB.start();
 
-// console.log(internet);
+personalMovieDB.rememberMyFilms();
 
-// let str = 'some';
-// let strObj = new String(str);
+personalMovieDB.detectPersonalLevel();
 
-// // console.log(typeof(str));
-// // console.log(typeof(strObj));
-// // console.log(strObj);
+personalMovieDB.writeYourGenres();
 
-// console.dir([1, 2, 3]);
+personalMovieDB.toggleVisibleMyDB();
 
-// const soldier = {
-//     health: 400,
-//     armor: 100,
-//     sayHello: function () {
-//         console.log('Say Hello');
-//     }
-// };
+personalMovieDB.showMyDB(personalMovieDB.privat);
 
-// const john = Object.create(soldier);
+personalMovieDB.toggleVisibleMyDB();
 
-// // const john = {
-// //     health: 100
-// // };
-
-// // john.__proto__ = soldier;
-
-// // Object.setPrototypeOf(john, soldier);
-
-// john.sayHello();
-
-// console.log(john);
+personalMovieDB.showMyDB(personalMovieDB.privat);
