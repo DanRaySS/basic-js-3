@@ -383,102 +383,125 @@
 
 // showMyDB(personalMovieDB.privat);
 
-"use strict";
+// "use strict";
 
-const personalMovieDB = {
-    count: 0,
-    movies: {
+// const personalMovieDB = {
+//     count: 0,
+//     movies: {
 
-    },
-    actors: {
+//     },
+//     actors: {
 
-    },
-    genres: [
+//     },
+//     genres: [
 
-    ],
-    privat: false,
+//     ],
+//     privat: false,
 
-    start: function () {
-        personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');
+//     start: function () {
+//         personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-        while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
-            personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');
-        }
-    },
+//         while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
+//             personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');
+//         }
+//     },
 
-    rememberMyFilms: function () {
-        for (let i = 0; i < 2; i++) {
+//     rememberMyFilms: function () {
+//         for (let i = 0; i < 2; i++) {
 
-            const lastWatchedFilm = prompt('Один из последних просмотренных фильмов?', '').trim(),
-                filmScore = prompt('На сколько оцените его?', '');
+//             const lastWatchedFilm = prompt('Один из последних просмотренных фильмов?', '').trim(),
+//                 filmScore = prompt('На сколько оцените его?', '');
 
-            if (personalMovieDB.count === '' || personalMovieDB.count === null || personalMovieDB.count.length > 50) {
-                console.log('error');
-                i--;
-                continue;
-            }
-            personalMovieDB.movies[lastWatchedFilm] = filmScore;
-            console.log('done');
-        }
-    },
+//             if (personalMovieDB.count === '' || personalMovieDB.count === null || personalMovieDB.count.length > 50) {
+//                 console.log('error');
+//                 i--;
+//                 continue;
+//             }
+//             personalMovieDB.movies[lastWatchedFilm] = filmScore;
+//             console.log('done');
+//         }
+//     },
 
-    detectPersonalLevel: function () {
-        if (personalMovieDB.count < 10) {
-            alert(`Просмотрено довольно мало фильмов`);
-        }
-        else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 30) {
-            alert(`Вы классический зритель`);
-        }
-        else if (personalMovieDB.count > 30) {
-            alert(`Вы киноман`);
-        }
-        else {
-            alert("Произошла ошибка");
-        }
-    },
+//     detectPersonalLevel: function () {
+//         if (personalMovieDB.count < 10) {
+//             alert(`Просмотрено довольно мало фильмов`);
+//         }
+//         else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 30) {
+//             alert(`Вы классический зритель`);
+//         }
+//         else if (personalMovieDB.count > 30) {
+//             alert(`Вы киноман`);
+//         }
+//         else {
+//             alert("Произошла ошибка");
+//         }
+//     },
 
-    showMyDB: function (hidden) {
-        if (hidden) {
-            return;
-        }
-        console.log(personalMovieDB);
-    },
+//     showMyDB: function (hidden) {
+//         if (hidden) {
+//             return;
+//         }
+//         console.log(personalMovieDB);
+//     },
 
-    writeYourGenres: function () {
-        start: for (let i = 1; i <= 3; i++) {
-            let favouriteGenre = prompt(`Ваш любимый жанр под номером ${i}: `, '');
-            if (favouriteGenre === '' || favouriteGenre === null) {
-                i--;
-                continue start;
-            }
-            personalMovieDB.genres[i - 1] = favouriteGenre;
-        }
-        personalMovieDB.genres.forEach((genre, index) => {
-            console.log(`Любимый жанр #${index + 1} - это ${genre}`);
-        });
-    },
+//     writeYourGenres: function () {
+//         start: for (let i = 1; i <= 3; i++) {
+//             let favouriteGenre = prompt(`Ваш любимый жанр под номером ${i}: `, '');
+//             if (favouriteGenre === '' || favouriteGenre === null) {
+//                 i--;
+//                 continue start;
+//             }
+//             personalMovieDB.genres[i - 1] = favouriteGenre;
+//         }
+//         personalMovieDB.genres.forEach((genre, index) => {
+//             console.log(`Любимый жанр #${index + 1} - это ${genre}`);
+//         });
+//     },
 
-    toggleVisibleMyDB: function () {
-        if (personalMovieDB.privat) {
-            personalMovieDB.privat = false;
-            return;
-        }
-        personalMovieDB.privat = true;
-    }
-};
+//     toggleVisibleMyDB: function () {
+//         if (personalMovieDB.privat) {
+//             personalMovieDB.privat = false;
+//             return;
+//         }
+//         personalMovieDB.privat = true;
+//     }
+// };
 
-personalMovieDB.start();
+// personalMovieDB.start();
 
-personalMovieDB.rememberMyFilms();
+// personalMovieDB.rememberMyFilms();
 
-personalMovieDB.detectPersonalLevel();
+// personalMovieDB.detectPersonalLevel();
 
-personalMovieDB.writeYourGenres();
+// personalMovieDB.writeYourGenres();
 
-personalMovieDB.toggleVisibleMyDB();
+// personalMovieDB.toggleVisibleMyDB();
 
-personalMovieDB.showMyDB(personalMovieDB.privat);
+// personalMovieDB.showMyDB(personalMovieDB.privat);
 
-personalMovieDB.toggleVisibleMyDB();
+// personalMovieDB.toggleVisibleMyDB();
 
-personalMovieDB.showMyDB(personalMovieDB.privat);
+// personalMovieDB.showMyDB(personalMovieDB.privat);
+
+// console.log([ ] + false - null + true); = NaN ([ ] = "")
+
+// let y = 1; let x = y = 2; alert(x); 
+
+// console.log([ ] + 1 + 2); //12
+
+// alert( "1"[0] ) //1
+
+// console.log(2 && 1 && null && 0 && undefined );
+
+// !!( a && b ) и (a && b) - est' raznica-
+
+// alert( null || 2 && 3 || 4 ); //3
+
+// console.log([1, 2, 3] == [1, 2, 3]);
+
+// alert( +"Infinity" ); 
+
+// console.log("Ёжик" > "яблоко"); //false
+
+// console.log(0 || "" || 2 || undefined || true || falsе);
+
