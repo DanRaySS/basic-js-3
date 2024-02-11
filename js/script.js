@@ -485,7 +485,7 @@
 
 // console.log([ ] + false - null + true); = NaN ([ ] = "")
 
-// let y = 1; let x = y = 2; alert(x); 
+// let y = 1; let x = y = 2; alert(x);
 
 // console.log([ ] + 1 + 2); //12
 
@@ -499,7 +499,7 @@
 
 // console.log([1, 2, 3] == [1, 2, 3]);
 
-// alert( +"Infinity" ); 
+// alert( +"Infinity" );
 
 // console.log("Ёжик" > "яблоко"); //false
 
