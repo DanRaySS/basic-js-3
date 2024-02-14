@@ -80,3 +80,8 @@ button {
     margin-top: 30px;
     color: #fff;
 }
+
+.overlay {
+    padding: 50px;
+    background-color: wheat;
+}

@@ -505,12 +505,12 @@
 
 // console.log(0 || "" || 2 || undefined || true || falsе);
 
-const box = document.getElementById('box'),
-    btns = document.getElementsByTagName('button'),
-    circles = document.getElementsByClassName('circle'),
-    wrapper = document.querySelector('.wrapper'),
-    hearts = wrapper.querySelectorAll('.heart'),
-    oneHeart = wrapper.querySelector('.heart');
+// const box = document.getElementById('box'),
+//     btns = document.getElementsByTagName('button'),
+//     circles = document.getElementsByClassName('circle'),
+//     wrapper = document.querySelector('.wrapper'),
+//     hearts = wrapper.querySelectorAll('.heart'),
+//     oneHeart = wrapper.querySelector('.heart');
 
 
 // console.dir(oneHeart);
@@ -530,16 +530,16 @@ const box = document.getElementById('box'),
 //     hearts[i].style.backgroundColor = 'blue';
 // }
 
-hearts.forEach(item => {
-    item.style.backgroundColor = 'blue';
-});
+// hearts.forEach(item => {
+//     item.style.backgroundColor = 'blue';
+// });
 
-const div = document.createElement('div');
-// const text = document.createTextNode('Тут был я');
+// const div = document.createElement('div');
+// // const text = document.createTextNode('Тут был я');
 
-div.classList.add('black');
+// div.classList.add('black');
 
-wrapper.append(div);
+// wrapper.append(div);
 // wrapper.appendChild(div); //Устаревшая версия
 
 // wrapper.prepend(div);
@@ -555,8 +555,50 @@ wrapper.append(div);
 // hearts[0].replaceWith(circles[0]);
 // wrapper.replaceChild(circles[0], hearts[0]);
 
-div.innerHTML = "<h1>Hello World</h1>";
+// div.innerHTML = "<h1>Hello World</h1>";
 
-// div.textContent = "<h1>Hello World</h1>";
+// // div.textContent = "<h1>Hello World</h1>";
 
-div.insertAdjacentHTML('beforebegin', '<h2>Hello</h2>');
+// div.insertAdjacentHTML('beforebegin', '<h2>Hello</h2>');
+
+const btns = document.querySelectorAll('button'),
+    btn = document.querySelector('button'),
+    overlay = document.querySelector('.overlay')
+
+// btns.forEach(item => {
+//     item.onclick = () => {
+//         alert('hi');
+//     }
+// })
+
+// btn.onclick = () => {
+//     alert('second click');
+// }
+
+// btn.addEventListener('click', () => {
+//     alert('Click');
+// });
+
+// btn.addEventListener('mouseenter', (event) => {
+//     // console.log(event.target);
+//     event.target.remove();
+//     // console.log('Hover');
+// });
+
+// let i = 0;
+// const deleteElement = (e) => {
+//     console.log(e.target);
+//     console.log(e.type);
+//     // i++;
+//     // if (i === 1) {
+//     //     btn.removeEventListener('click', deleteElement);
+//     // }
+// };
+
+btn.addEventListener('click', deleteElement, {once: true});
+overlay.addEventListener('click', deleteElement);
+
+
+// btn.addEventListener('click', () => {
+//     alert('second click');
+// });
