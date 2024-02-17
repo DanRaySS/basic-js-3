@@ -809,29 +809,31 @@ P.S. Здесь есть несколько вариантов решения з
 //touchleave
 //touchcancel
 
-window.addEventListener('DOMContentLoaded', () => {
-    const header = document.querySelector('.header');
+// window.addEventListener('DOMContentLoaded', () => {
+//     const header = document.querySelector('.header');
 
-    header.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        console.log('Start');
-        // console.log(e.touches);
-        console.log(e.targetTouches);
-    });
+//     header.addEventListener('touchstart', (e) => {
+//         e.preventDefault();
+//         console.log('Start');
+//         // console.log(e.touches);
+//         console.log(e.targetTouches);
+//     });
 
-    header.addEventListener('touchmove', (e) => {
-        e.preventDefault();
+//     header.addEventListener('touchmove', (e) => {
+//         e.preventDefault();
 
-        console.log('Move');
-        console.log(e.targetTouches[0].pageX);
-    });
+//         console.log('Move');
+//         console.log(e.targetTouches[0].pageX);
+//     });
 
-    // header.addEventListener('touchend', (e) => {
-    //     e.preventDefault();
-    //     console.log('End');
-    // });
-});
+//     // header.addEventListener('touchend', (e) => {
+//     //     e.preventDefault();
+//     //     console.log('End');
+//     // });
+// });
 
-//touches
-//targetTouches
-//changedTouches
+// //touches
+// //targetTouches
+// //changedTouches
+
+
