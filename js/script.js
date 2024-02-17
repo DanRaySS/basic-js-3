@@ -795,22 +795,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function handleFilmDelete(event) {
-        console.log(event);
-        console.log('ok');
-        movieDB.movies.pop();
-        movieList.lastElementChild.remove();
-        console.log(movieDB);
-    }
-
-    dltBtn.addEventListener('click', handleFilmDelete);
-
     deleteAdv(adv);
     makeChanges();
     createMovieList(movieDB.movies, movieList);
-
-
-
-
 
 });
