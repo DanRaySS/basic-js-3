@@ -561,9 +561,9 @@
 
 // div.insertAdjacentHTML('beforebegin', '<h2>Hello</h2>');
 
-const btns = document.querySelectorAll('button'),
-    btn = document.querySelector('button'),
-    overlay = document.querySelector('.overlay')
+// const btns = document.querySelectorAll('button'),
+//     btn = document.querySelector('button'),
+//     overlay = document.querySelector('.overlay');
 
 // btns.forEach(item => {
 //     item.onclick = () => {
@@ -629,3 +629,188 @@ const btns = document.querySelectorAll('button'),
 
 //     console.log(node);
 // }
+
+// function pow(x, n) {
+//     let result = 1;
+
+//     for (let i = 0; i < n; i++) {
+//         result *= x;
+//     }
+
+//     return result;
+// }
+
+// function pow(x, n) {
+//     if (n === 1) {
+//         return x;
+//     } else {
+//         return x * pow(x, n - 1);
+//     }
+// }
+
+// pow(2, 0); //1
+// pow(2, 1); //2
+// pow(2, 2); //4
+// pow(2, 3); //8
+// pow(2, 4); //16
+
+
+/* Задания на урок:
+
+1) Реализовать функционал, что после заполнения формы и нажатия кнопки "Подтвердить" - 
+новый фильм добавляется в список. Страница не должна перезагружаться.
+Новый фильм должен добавляться в movieDB.movies.
+Для получения доступа к значению input - обращаемся к нему как input.value;
+P.S. Здесь есть несколько вариантов решения задачи, принимается любой, но рабочий.
+
+2) Если название фильма больше, чем 21 символ - обрезать его и добавить три точки
+
+3) При клике на мусорную корзину - элемент будет удаляться из списка (сложно)
+
+4) Если в форме стоит галочка "Сделать любимым" - в консоль вывести сообщение: 
+"Добавляем любимый фильм"
+
+5) Фильмы должны быть отсортированы по алфавиту */
+
+// Возьмите свой код из предыдущей практики
+
+/* Задания на урок:
+
+1) Удалить все рекламные блоки со страницы (правая часть сайта)
+
+2) Изменить жанр фильма, поменять "комедия" на "драма"
+
+3) Изменить задний фон постера с фильмом на изображение "bg.jpg". Оно лежит в папке img.
+Реализовать только при помощи JS
+
+4) Список фильмов на странице сформировать на основании данных из этого JS файла.
+Отсортировать их по алфавиту 
+
+5) Добавить нумерацию выведенных фильмов */
+
+
+
+/* Задания на урок:
+
+1) Реализовать функционал, что после заполнения формы и нажатия кнопки "Подтвердить" - 
+новый фильм добавляется в список. Страница не должна перезагружаться.
+Новый фильм должен добавляться в movieDB.movies.
+Для получения доступа к значению addInput - обращаемся к нему как addInput.value;
+P.S. Здесь есть несколько вариантов решения задачи, принимается любой, но рабочий.
+
+2) Если название фильма больше, чем 21 символ - обрезать его и добавить три точки
+
+3) При клике на мусорную корзину - элемент будет удаляться из списка (сложно)
+
+4) Если в форме стоит галочка "Сделать любимым" - в консоль вывести сообщение: 
+"Добавляем любимый фильм"
+
+5) Фильмы должны быть отсортированы по алфавиту */
+
+// Возьмите свой код из предыдущей практики
+
+
+'use strict';
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const adv = document.querySelectorAll('img'),
+        poster = document.querySelector('.promo__bg'),
+        genre = poster.querySelector('.promo__genre'),
+        movieList = document.querySelector('.promo__interactive-list'),
+        addForm = document.querySelector('form.add'),
+        addInput = document.querySelector('.adding__input'),
+        checkbox = document.querySelector('[type="checkbox"]'),
+        dltBtn = document.querySelector('.delete');
+
+
+    const movieDB = {
+        movies: [
+            "Логан",
+            "Лига справедливости",
+            "Ла-ла лэнд",
+            "Одержимость",
+            "Скотт Пилигрим против..."
+        ]
+    };
+
+    addForm.addEventListener('submit', handleFormSubmit);
+
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        let film = addInput.value.trim();
+        if (!film) {
+            return;
+        }
+        const lengthLimit = 21;
+        if (film.length > lengthLimit) {
+            film = film.substring(0, lengthLimit) + "...";
+        }
+        if (checkbox.checked) {
+            console.log('Добавляем любимый фильм');
+        }
+        movieDB.movies.push(film);
+        sortArr(movieDB.movies);
+        createMovieList(movieDB.movies, movieList);
+        event.target.reset();
+    }
+
+    const deleteAdv = (arr) => {
+        arr.forEach(img => {
+            img.remove();
+        });
+    };
+
+    const makeChanges = () => {
+        genre.textContent = "драма";
+
+        poster.style.backgroundImage = "url(../img/bg.jpg)";
+    };
+
+    const sortArr = (arr) => {
+        arr.sort();
+    };
+
+    function createMovieList(films, parent) {
+
+        parent.innerHTML = "";
+
+        sortArr(films);
+
+        films.forEach((item, i) => {
+
+            parent.innerHTML += `                        
+            <li class="promo__interactive-item">${i + 1}) ${item}
+                <div class="delete"></div>
+            </li>`;
+        });
+
+        document.querySelectorAll('.delete').forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                btn.parentElement.remove();
+                movieDB.movies.splice(i, 1);
+
+                createMovieList(films, parent);
+            });
+        });
+    }
+
+    function handleFilmDelete(event) {
+        console.log(event);
+        console.log('ok');
+        movieDB.movies.pop();
+        movieList.lastElementChild.remove();
+        console.log(movieDB);
+    }
+
+    dltBtn.addEventListener('click', handleFilmDelete);
+
+    deleteAdv(adv);
+    makeChanges();
+    createMovieList(movieDB.movies, movieList);
+
+
+
+
+
+});
